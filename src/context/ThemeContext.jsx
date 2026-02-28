@@ -26,8 +26,8 @@ export const ThemeModeProvider = ({ children }) => {
       mode,
       primary: { main: '#0f70d8' },
       background: {
-        default: mode === 'dark' ? '#0B1020' : '#ffffff', 
-        paper: mode === 'dark' ? '#080c1b' : '#ffffff',
+        default: mode === 'dark' ? '#0B1020' : '#fefefe', 
+        paper: mode === 'dark' ? '#080c1b' : '#fefefe',
       },
       text: {
         primary: mode === 'dark' ? '#ffffff' : '#171717',

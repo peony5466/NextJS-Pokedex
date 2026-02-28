@@ -51,7 +51,7 @@ export default function PokemonCard({ pokemon, typeColors }) {
       href={`/pokemon/${pokemon.id}`} 
       sx={{ 
         p: 3, textAlign: 'center', display: 'block', textDecoration: 'none',
-        borderRadius: 2, transition: 'all 0.4s ease-in-out',width: '100%',boxSizing: 'border-box',  ...cardStyle 
+        borderRadius: 2, transition: 'all 0.4s ease-in-out',width: 200 ,boxSizing: 'border-box',  ...cardStyle 
       }}
     >
       <Typography variant="caption" sx={{ color: mode === 'dark' ? alpha('#fff', 0.5) : 'text.secondary' }}>
