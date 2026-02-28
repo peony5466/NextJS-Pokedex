@@ -21,7 +21,7 @@ export default function PokemonListPage({ initialPokemons, typeColors }) {
   const allTypes = typeColors ? Object.keys(typeColors) : [];
 
   const filteredPokemons = (initialPokemons || []).filter((pokemon) => {
-    const name = pokemon.names[language] || pokemon.names['en'] || "";
+    const name = pokemon.names?.[language] || pokemon.names?.en || "";
     const matchesName = name.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesType = !selectedType || pokemon.types.includes(selectedType);
     return matchesName && matchesType;
@@ -40,7 +40,7 @@ export default function PokemonListPage({ initialPokemons, typeColors }) {
 
       <Grid container spacing={3}>
         {filteredPokemons.map((pokemon) => (
-          <Grid item xs={12} sm={6} md={4} lg={2} key={pokemon.id}>
+          <Grid item xs={12} sm={6} md={4} lg={3} key={pokemon.id}>
             <PokemonCard pokemon={pokemon} typeColors={typeColors} />
           </Grid>
         ))}

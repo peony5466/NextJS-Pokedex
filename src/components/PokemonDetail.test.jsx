@@ -31,7 +31,7 @@ describe('PokemonDetail', () => {
       </LanguageProvider>
     );
 
-    const button = screen.getByText(/Voir les mouvements/i);
+    const button = screen.getByRole('button', { name: /moves/i });
     fireEvent.click(button);
 
     expect(screen.getByText(/Tackle/i)).toBeInTheDocument();

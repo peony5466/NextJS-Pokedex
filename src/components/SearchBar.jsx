@@ -5,7 +5,7 @@ import { useLanguage } from '@/context/LanguageContext';
 
 export default function SearchBar({ onSearchChange, pokemons, value }) {
   const { language } = useLanguage();
-  const options = pokemons?.map(p => p.names[language] || p.names['en']) || [];
+  const options = pokemons?.map(p => p.names?.[language] || p.names?.en) || [];
 
   return (
     <Autocomplete

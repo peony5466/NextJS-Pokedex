@@ -11,7 +11,7 @@ import TypeBadge from './TypeBadge';
 export default function PokemonCard({ pokemon, typeColors }) {
   const { language } = useLanguage();
   const { mode } = useThemeMode();
-  const name = pokemon.names[language] || pokemon.names.en;
+  const name = pokemon.names?.[language] || pokemon.names?.en;
 
   //  Récupération des types 
   const type1 = pokemon.types?.[0]?.toLowerCase();
