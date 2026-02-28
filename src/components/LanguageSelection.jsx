@@ -17,8 +17,8 @@ const LanguageSelection = () => {
         '& .MuiSvgIcon-root': { color: 'white' }
       }}
     >
-      <MenuItem value="en">EN</MenuItem>
       <MenuItem value="fr">FR</MenuItem>
+      <MenuItem value="en">EN</MenuItem>
       <MenuItem value="de">DE</MenuItem>
       <MenuItem value="it">IT</MenuItem>
       <MenuItem value="es">ES</MenuItem>
