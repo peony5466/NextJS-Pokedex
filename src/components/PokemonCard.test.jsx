@@ -2,6 +2,7 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import PokemonCard from './PokemonCard';
 import { LanguageProvider } from '../context/LanguageContext';
+import { ThemeModeProvider } from '@/context/ThemeContext';
 
 const mockPokemon = {
   id: 1,
@@ -18,7 +19,9 @@ describe('PokemonCard', () => {
   it('affiche le nom traduit et le numéro formaté (No. 001)', () => {
     render(
       <LanguageProvider>
-        <PokemonCard pokemon={mockPokemon} typeColors={mockTypeColors} />
+         <ThemeModeProvider> 
+          <PokemonCard pokemon={mockPokemon} typeColors={mockTypeColors} />
+        </ThemeModeProvider>
       </LanguageProvider>
     );
 
